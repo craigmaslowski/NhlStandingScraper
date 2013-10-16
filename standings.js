@@ -30,8 +30,10 @@ jsdom.env(
 	["http://code.jquery.com/jquery.js"],
 	function (errors, window) {
 		var $ = window.jQuery,
+			today = new Date(),
 			pacificRows = $('th:contains("Pacific")').parent().parent().parent().find('tbody tr');
 		
+		console.log('*Updated ' + (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear() + '* [See current standings](https://www.google.com/search?q=nhl+pacific+division+standings)\n\nTeam|GP|W|L|OT|PTS\n:----|:----|:----|:----|:----|:----|\n');
 		pacificRows.each(function () {
 			var cells = $(this).find('td'),
 				team = new Team(
