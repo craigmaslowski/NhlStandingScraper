@@ -1,0 +1,1 @@
+Simple util to scrape the standings on NHL.com and output markdown for updating the sidebar on /r/PacificDivision

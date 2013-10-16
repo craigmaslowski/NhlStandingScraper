@@ -1,0 +1,20 @@
+{
+  "name": "r-pacific-division-standings-scraper",
+  "version": "0.1.0",
+  "author": "Craig Maslowski",
+  "description": "a simple util to spit out standings markdown for r/pacificdivision's sidebar",
+  "contributors": [ 
+    {
+      "name": "Craig Maslowski",
+      "email": "craig@craigmaslowski.com"
+    } 
+  ],
+  "dependencies" : {
+    "jsdom"   :  "0.8.6",
+    "lodash" :  "2.2.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.8.14"
+  }
+}
