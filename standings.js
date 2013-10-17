@@ -22,7 +22,7 @@ var teamLinkMap = {
 		'LAK': 'http://LosAngelesKings.reddit.com/#kingsMedium',
 		'EDM': 'http://edmontonoilers.reddit.com/#oilersMedium'
 	},
-	sidebarTemplate = _.template('[](<%= teamLink %>)|<%= gamesPlayed %>|<%= wins %>|<%= losses %>|<%= overtimeLosses %>|<%= points %>|'),
+	rowTemplate = _.template('[](<%= teamLink %>)|<%= gamesPlayed %>|<%= wins %>|<%= losses %>|<%= overtimeLosses %>|<%= points %>|'),
 	teams= [];
 
 jsdom.env(
@@ -35,17 +35,16 @@ jsdom.env(
 		
 		console.log('*Updated ' + (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear() + '* [See current standings](https://www.google.com/search?q=nhl+pacific+division+standings)\n\nTeam|GP|W|L|OT|PTS\n:----|:----|:----|:----|:----|:----|');
 		pacificRows.each(function () {
-			var cells = $(this).find('td'),
-				team = new Team(
+			var cells = $(this).find('td');
+
+			console.log(rowTemplate(new Team(
 					teamLinkMap[$(cells[1]).find('a').attr('rel')],
 					cells[2].innerHTML,
 					cells[3].innerHTML,
 					cells[4].innerHTML,
 					cells[5].innerHTML,
 					cells[6].innerHTML 
-				);
-
-			console.log(sidebarTemplate(team));
+			)));
 		});
 	}
 );
