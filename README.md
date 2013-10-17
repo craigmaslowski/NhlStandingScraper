@@ -1,4 +1,4 @@
-Simple util to scrape the standings on NHL.com and output markdown for updating the sidebar on /r/PacificDivision
+Simple util to scrape the standings on NHL.com and output markdown for updating the sidebar on [/r/PacificDivision](http://reddit.com/r/pacificdivision)
 
 # Installation
 1. Download and install [Node.js](http://nodejs.org/).
