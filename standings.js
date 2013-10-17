@@ -33,7 +33,7 @@ jsdom.env(
 			today = new Date(),
 			pacificRows = $('th:contains("Pacific")').parent().parent().parent().find('tbody tr');
 		
-		console.log('*Updated ' + (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear() + '* [See current standings](https://www.google.com/search?q=nhl+pacific+division+standings)\n\nTeam|GP|W|L|OT|PTS\n:----|:----|:----|:----|:----|:----|\n');
+		console.log('*Updated ' + (today.getMonth() + 1) + '/' + today.getDate() + '/' + today.getFullYear() + '* [See current standings](https://www.google.com/search?q=nhl+pacific+division+standings)\n\nTeam|GP|W|L|OT|PTS\n:----|:----|:----|:----|:----|:----|');
 		pacificRows.each(function () {
 			var cells = $(this).find('td'),
 				team = new Team(
