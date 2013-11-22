@@ -22,7 +22,7 @@ var teamLinkMap = {
 		'LAK': 'http://LosAngelesKings.reddit.com/#kingsMedium',
 		'EDM': 'http://edmontonoilers.reddit.com/#oilersMedium'
 	},
-	rowTemplate = _.template('[](<%= teamLink %>)|<%= gamesPlayed %>|<%= wins %>|<%= losses %>|<%= overtimeLosses %>|<%= points %>|');
+	rowTemplate = _.template('[](<%= teamLink %>)|<%= gamesPlayed %>|<%= wins %>|<%= losses %>|<%= overtimeLosses %>|**<%= points %>**|');
 
 jsdom.env(
 	"http://www.nhl.com/ice/standings.htm",
